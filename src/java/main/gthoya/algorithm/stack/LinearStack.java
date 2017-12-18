@@ -30,7 +30,10 @@ public class LinearStack<E> implements Stack<E> {
             return null;
         }
 
-        return (E) stack[--topIndex];
+        E result = (E) stack[--topIndex];
+        stack[topIndex] = null;
+
+        return result;
     }
 
     private boolean isFull() {

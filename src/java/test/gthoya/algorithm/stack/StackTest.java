@@ -4,6 +4,9 @@ public class StackTest {
     public static void main(String[] ar) throws Exception {
         Stack<Integer> stack = new LinearStack<Integer>(6);
 
+        stack.push(0);
+        System.out.println(stack.pop());
+
         stack.push(1);
         stack.push(2);
         stack.push(3);

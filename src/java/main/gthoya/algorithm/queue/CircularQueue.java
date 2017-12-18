@@ -33,6 +33,7 @@ public class CircularQueue<E> implements Queue<E>  {
         }
 
         E result = (E) queue[deQueueIndex];
+        queue[deQueueIndex] = null;
         deQueueIndex = (deQueueIndex + 1) % capacity;
 
         return result;

@@ -31,7 +31,10 @@ public class LinearQueue<E> implements Queue<E> {
             return null;
         }
 
-        return (E) queue[deQueueIndex++];
+        E result = (E) queue[deQueueIndex];
+        queue[deQueueIndex++] = null;
+
+        return result;
     }
 
     private boolean isEmpty() {

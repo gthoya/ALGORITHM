@@ -2,7 +2,7 @@ package gthoya.algorithm.queue;
 
 public class QueueTest {
     public static void main(String[] ar) throws Exception {
-        Queue<Integer> queue = new CircularQueue<Integer>(6);
+        Queue<Integer> queue = new LinearQueue<Integer>(6);
 
         queue.enqueue(0);
         System.out.println(queue.dequeue());
