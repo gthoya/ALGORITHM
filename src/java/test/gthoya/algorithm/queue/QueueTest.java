@@ -4,6 +4,9 @@ public class QueueTest {
     public static void main(String[] ar) throws Exception {
         Queue<Integer> queue = new CircularQueue<Integer>(6);
 
+        queue.enqueue(0);
+        System.out.println(queue.dequeue());
+
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);

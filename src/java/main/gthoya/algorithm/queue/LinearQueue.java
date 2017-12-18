@@ -1,7 +1,5 @@
 package gthoya.algorithm.queue;
 
-import java.util.Collection;
-
 public class LinearQueue<E> implements Queue<E> {
     private Object[] queue;
 

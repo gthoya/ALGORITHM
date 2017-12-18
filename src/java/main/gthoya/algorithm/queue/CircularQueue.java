@@ -22,8 +22,8 @@ public class CircularQueue<E> implements Queue<E>  {
             return;
         }
 
-        enQueueIndex = (enQueueIndex + 1) % capacity;
         queue[enQueueIndex] = values;
+        enQueueIndex = (enQueueIndex + 1) % capacity;
     }
 
     public E dequeue() {
@@ -32,8 +32,8 @@ public class CircularQueue<E> implements Queue<E>  {
             return null;
         }
 
-        deQueueIndex = (deQueueIndex + 1) % capacity;
         E result = (E) queue[deQueueIndex];
+        deQueueIndex = (deQueueIndex + 1) % capacity;
 
         return result;
     }
