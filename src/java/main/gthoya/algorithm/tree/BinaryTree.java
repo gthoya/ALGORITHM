@@ -110,4 +110,24 @@ public class BinaryTree implements Tree {
             printAll(currentNode.getRight());
         }
     }
+
+    public boolean searchNode(int data) {
+        return searchNode(this.root, data);
+    }
+
+    private boolean searchNode(Node currentNode, int data) {
+        if (currentNode == null) {
+            return false;
+        }
+
+        if (currentNode.getData() == data) {
+            return true;
+        } else if (currentNode.getData() < data) {
+            return searchNode(currentNode.getRight(), data);
+        } else if (currentNode.getData() > data) {
+            return searchNode(currentNode.getLeft(), data);
+        }
+
+        return false;
+    }
 }
