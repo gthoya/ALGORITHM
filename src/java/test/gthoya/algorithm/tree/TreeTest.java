@@ -4,6 +4,18 @@ public class TreeTest {
     public static void main(String[] ar) {
         Tree tree = new BinaryTree();
 
+        tree.insertNode(0);
+        tree.printAll();
+
+        System.out.println();
+        System.out.println();
+
+        tree.deleteNode(0);
+        tree.printAll();
+
+        System.out.println();
+        System.out.println();
+
         tree.deleteNode(5);
         tree.insertNode(5);
         tree.printAll();

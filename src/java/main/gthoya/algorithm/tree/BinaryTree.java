@@ -51,7 +51,15 @@ public class BinaryTree implements Tree {
 
         if (currentNode.getData() == data) {
             if (currentNode.getLeft() == null && currentNode.getRight() == null) {
-                currentNode = null;
+                if (preNode == null) {
+                    this.root = null;
+                } else {
+                    if (preNode.getData() < currentNode.getData()) {
+                        preNode.setRight(null);
+                    } else {
+                        preNode.setLeft(null);
+                    }
+                }
             } else if (currentNode.getLeft() == null && currentNode.getRight() != null) {
                 if (preNode != null) {
                     preNode.setRight(currentNode.getRight());
