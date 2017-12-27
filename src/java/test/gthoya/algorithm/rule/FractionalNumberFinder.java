@@ -1,6 +1,6 @@
 package gthoya.algorithm.rule;
 
-public class FractionalFinder {
+public class FractionalNumberFinder {
     // orderCount == 1 , i == 1 , sum == 1 , 1/1
     // orderCount == 2 , i == 2 , sum == 3 , 1/2
     // orderCount == 3 , i == 2 , sum == 3 , 2/1
