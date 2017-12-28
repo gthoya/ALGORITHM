@@ -1,4 +1,4 @@
-package gthoya.algorithm.stack;
+package gthoya.algorithm;
 
 import java.util.Scanner;
 
