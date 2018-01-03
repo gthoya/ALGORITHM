@@ -7,7 +7,6 @@ public class PrimeNumber {
         Scanner scanner = new Scanner(System.in);
         int minNumber = scanner.nextInt();
         int maxNumber = scanner.nextInt();
-        int maxPrimeNumber = 2;
 
         boolean[] checkNotPrimeNumber = new boolean[maxNumber + 1];
         checkNotPrimeNumber[0] = true;
@@ -18,13 +17,8 @@ public class PrimeNumber {
                 continue;
             }
 
-            for (int j = maxPrimeNumber; j <= i; j++) {
-                if (i % j == 0) {
-                    maxPrimeNumber = j;
-                    for (int k = j * 2; k <= maxNumber; k += j) {
-                        checkNotPrimeNumber[k] = true;
-                    }
-                }
+            for (int k = i * 2; k <= maxNumber; k += i) {
+                checkNotPrimeNumber[k] = true;
             }
         }
 
