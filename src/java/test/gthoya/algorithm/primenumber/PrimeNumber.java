@@ -1,8 +1,8 @@
-package gthoya.algorithm;
+package gthoya.algorithm.primenumber;
 
 import java.util.Scanner;
 
-public class Main {
+public class PrimeNumber {
     public static void main(String[] ar) {
         Scanner scanner = new Scanner(System.in);
         int minNumber = scanner.nextInt();
