@@ -1,4 +1,4 @@
-package gthoya.swexpertacademy;
+package gthoya.swexpertacademy.level3;
 
 import java.util.Scanner;
 
