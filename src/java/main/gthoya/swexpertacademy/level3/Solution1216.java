@@ -9,7 +9,8 @@ public class Solution1216 {
         Scanner scanner = new Scanner(System.in);
         char[][] input = new char[MAX_LENGTH][MAX_LENGTH];
         String inputLine;
-        int tempCount, maxPalindrome;
+        int result;
+        boolean isPanlindrome;
 
         for (int i = 1; i <= 10; i++) {
             scanner.nextInt();
@@ -20,13 +21,24 @@ public class Solution1216 {
                 }
             }
 
-            tempCount = 0;
-            maxPalindrome = 0;
+            result = 0;
             for (int j = 0; j < MAX_LENGTH; j++) {
                 for (int k = 0; k < MAX_LENGTH; k++) {
-                    for (int l = 0; l < MAX_LENGTH; l++) {
-                        if (input[j][k] == input[j][l]) {
+                    for (int l = k; l < MAX_LENGTH; l++) {
+                        if (input[j][k] != input[j][l]) {
+                            continue;
+                        } else {
+                            isPanlindrome = true;
+                            for (int m = 0; m < l - k; m++) {
+                                if (input[j][k + m] != input[j][l - m]) {
+                                    isPanlindrome = false;
+                                    break;
+                                }
+                            }
 
+                            if (isPanlindrome) {
+                                result = (result > l - k + 1? result : l - k + 1);
+                            }
                         }
                     }
                 }
@@ -34,15 +46,27 @@ public class Solution1216 {
 
             for (int j = 0; j < MAX_LENGTH; j++) {
                 for (int k = 0; k < MAX_LENGTH; k++) {
-                    for (int l = 0; l < MAX_LENGTH; l++) {
-                        if (input[j][k] == input[j][k + l]) {
+                    for (int l = k; l < MAX_LENGTH; l++) {
+                        if (input[k][j] != input[l][j]) {
+                            continue;
+                        } else {
+                            isPanlindrome = true;
+                            for (int m = 0; m < l - k; m++) {
+                                if (input[k + m][j] != input[l - m][j]) {
+                                    isPanlindrome = false;
+                                    break;
+                                }
+                            }
 
+                            if (isPanlindrome) {
+                                result = (result > l - k + 1 ? result : l - k + 1);
+                            }
                         }
                     }
                 }
             }
 
-            System.out.println("#" + i + " " + maxPalindrome);
+            System.out.println("#" + i + " " + result);
         }
     }
 }
