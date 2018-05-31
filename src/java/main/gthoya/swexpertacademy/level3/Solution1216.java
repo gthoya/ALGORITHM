@@ -10,7 +10,7 @@ public class Solution1216 {
         char[][] input = new char[MAX_LENGTH][MAX_LENGTH];
         String inputLine;
         int result;
-        boolean isPanlindrome;
+        boolean isPalindrome;
 
         for (int i = 1; i <= 10; i++) {
             scanner.nextInt();
@@ -28,15 +28,15 @@ public class Solution1216 {
                         if (input[j][k] != input[j][l]) {
                             continue;
                         } else {
-                            isPanlindrome = true;
+                            isPalindrome = true;
                             for (int m = 0; m < l - k; m++) {
                                 if (input[j][k + m] != input[j][l - m]) {
-                                    isPanlindrome = false;
+                                    isPalindrome = false;
                                     break;
                                 }
                             }
 
-                            if (isPanlindrome) {
+                            if (isPalindrome) {
                                 result = (result > l - k + 1? result : l - k + 1);
                             }
                         }
@@ -50,15 +50,15 @@ public class Solution1216 {
                         if (input[k][j] != input[l][j]) {
                             continue;
                         } else {
-                            isPanlindrome = true;
+                            isPalindrome = true;
                             for (int m = 0; m < l - k; m++) {
                                 if (input[k + m][j] != input[l - m][j]) {
-                                    isPanlindrome = false;
+                                    isPalindrome = false;
                                     break;
                                 }
                             }
 
-                            if (isPanlindrome) {
+                            if (isPalindrome) {
                                 result = (result > l - k + 1 ? result : l - k + 1);
                             }
                         }
