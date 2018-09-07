@@ -5,11 +5,11 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class MeetingRoom {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int meetingCount = sc.nextInt();
         int[][] arr = new int[meetingCount][2];
-        int result = 0, end = -1;
+        int result = 0, end = 0;
 
         for (int i = 0; i < meetingCount; i++) {
             arr[i][0] = sc.nextInt();
@@ -19,13 +19,12 @@ public class MeetingRoom {
         Arrays.sort(arr, new Comparator<int[]>() {
             @Override
             public int compare(int[] start, int[] end) {
-                if(start[1] == end[1]){
+                if (start[1] == end[1]) {
                     return Integer.compare(start[0], end[0]);
                 }
 
                 return Integer.compare(start[1], end[1]);
             }
-
         });
 
         for (int i = 0; i < meetingCount; i++) {
