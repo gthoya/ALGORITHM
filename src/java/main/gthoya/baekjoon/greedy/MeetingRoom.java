@@ -18,12 +18,12 @@ public class MeetingRoom {
 
         Arrays.sort(arr, new Comparator<int[]>() {
             @Override
-            public int compare(int[] start, int[] end) {
-                if (start[1] == end[1]) {
-                    return Integer.compare(start[0], end[0]);
+            public int compare(int[] before, int[] next) {
+                if (before[1] == next[1]) {
+                    return Integer.compare(before[0], next[0]);
                 }
 
-                return Integer.compare(start[1], end[1]);
+                return Integer.compare(before[1], next[1]);
             }
         });
 
