@@ -5,22 +5,16 @@ import java.util.Scanner;
 public class Tournament {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int totalParticipator = scanner.nextInt();
+        scanner.nextInt();
+
         int jimin = scanner.nextInt();
         int hansoo = scanner.nextInt();
         int result = 0;
 
-        while (true) {
-            if (jimin + hansoo > totalParticipator) {
-                while (totalParticipator / 2 > 0) {
-                    totalParticipator /= 2;
-                    result++;
-                }
-
-                break;
-            } else {
-                totalParticipator /= 2;
-            }
+        while (jimin != hansoo) {
+            jimin = (jimin + 1) / 2;
+            hansoo = (hansoo + 1) / 2;
+            result++;
         }
 
         System.out.println(result);
