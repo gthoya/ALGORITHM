@@ -1,4 +1,4 @@
-package gthoya.codility.tutorial;
+package gthoya.codility.tutorial.arrays;
 
 import java.util.HashMap;
 import java.util.Map;

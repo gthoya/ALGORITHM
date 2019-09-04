@@ -1,4 +1,4 @@
-package gthoya.codility.tutorial;
+package gthoya.codility.tutorial.arrays;
 
 public class CyclicRotation {
     public int[] solution(int[] A, int K) {

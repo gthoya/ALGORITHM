@@ -1,4 +1,4 @@
-package gthoya.codility.tutorial;
+package gthoya.codility.tutorial.iterations;
 
 public class BinaryGap {
     public int solution(int N) {
